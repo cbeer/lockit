@@ -1,0 +1,27 @@
+#!/usr/bin/ruby
+require 'optparse'
+
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+require 'lockit'
+
+options = {}
+
+optparse = OptionParser.new do |opts|
+   opts.banner = "Usage: lockit [options] [dir]"
+
+   # This displays the help screen, all programs are
+   # assumed to have this option.
+   opts.on( '-h', '--help', 'Display this screen' ) do
+     puts opts
+     exit
+   end
+end
+
+optparse.parse!
+
+options[:dir] = ARGV.shift
+options[:dir] ||= Dir.pwd
+
+response = LockIt::Dir.new(options[:dir]).lock
+
+exit 1 unless response

@@ -1,6 +1,6 @@
 = lockit
 
-Description goes here.
+A ruby implementation of LockIt: A Simple File-based Convention for Resource Locking
 
 == Contributing to lockit
  

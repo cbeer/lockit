@@ -1,0 +1,3 @@
+- Can a process obtain a lock within a locked file system hierarchy?
+
+- "Once the lock release time has expired, that is, the current time is later than the release time, the lock file is considered stale." .. How should the library distinguish between stale + non-stale lock files? TRUE/FALSE/STALE?
