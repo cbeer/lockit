@@ -71,6 +71,7 @@ module LockIt
     def lock_content args
       s = "Lock: #{Time.now.utc.strftime("%Y-%m-%dT%H:%M:%S+00:00")} #{uniqid}"
       s += " #{args[:release].utc.strftime("%Y-%m-%dT%H:%M:%S+00:00")}" if args[:release] and args[:release].respond_to? :utc
+      s
     end
 
     def uniqid
