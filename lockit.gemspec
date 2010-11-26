@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{lockit}
-  s.version = ""
+  s.version = "0.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Chris Beer"]
@@ -25,9 +25,11 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "TODO",
+    "VERSION",
     "bin/lockit",
     "bin/unlockit",
     "lib/lockit.rb",
+    "lockit.gemspec",
     "test/helper.rb",
     "test/test_lockit.rb"
   ]
